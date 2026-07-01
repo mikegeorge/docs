@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stand Tall — 3-Day Strength &amp; Posture Program</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F6F2;
+    --ink:#1C2B26;
+    --pine:#1E3A2F;
+    --pine-soft:#2E5244;
+    --line:#D8DED6;
+    --amber:#E8A13D;
+    --amber-deep:#C77F1B;
+    --card:#FFFFFF;
+    --mono:'JetBrains Mono',monospace;
+    --display:'Barlow Condensed',sans-serif;
+    --body:'Barlow',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:var(--body);line-height:1.55}
+
+  /* ---------- Header ---------- */
+  header{background:var(--pine);color:#F2F5EF;padding:56px 20px 44px;position:relative;overflow:hidden}
+  header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;
+    background:repeating-linear-gradient(90deg,var(--amber) 0 46px,transparent 46px 66px)}
+  .wrap{max-width:1060px;margin:0 auto}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--amber);margin-bottom:14px}
+  header h1{font-family:var(--display);font-weight:700;font-size:clamp(44px,7vw,76px);line-height:.95;text-transform:uppercase;letter-spacing:.01em}
+  header p.sub{max-width:560px;margin-top:16px;font-size:17px;color:#C9D4CC}
+  .ptnote{margin-top:22px;display:inline-block;border:1px solid rgba(232,161,61,.55);border-left:4px solid var(--amber);
+    padding:10px 16px;font-size:14px;color:#EADFC8;background:rgba(0,0,0,.18)}
+
+  /* ---------- Sticky day nav ---------- */
+  nav{position:sticky;top:0;z-index:50;background:var(--pine);border-bottom:1px solid rgba(255,255,255,.12)}
+  nav .wrap{display:flex;gap:2px;overflow-x:auto}
+  nav a{font-family:var(--display);font-weight:600;font-size:17px;text-transform:uppercase;letter-spacing:.06em;
+    color:#C9D4CC;text-decoration:none;padding:12px 18px;white-space:nowrap;border-bottom:3px solid transparent}
+  nav a:hover,nav a:focus-visible{color:#fff;border-bottom-color:var(--amber)}
+
+  /* ---------- Sections ---------- */
+  section{padding:52px 20px 20px}
+  .sec-head{display:flex;align-items:baseline;gap:16px;border-bottom:3px solid var(--ink);padding-bottom:10px;margin-bottom:8px}
+  .daynum{font-family:var(--mono);font-weight:600;font-size:13px;letter-spacing:.18em;color:var(--amber-deep);text-transform:uppercase}
+  .sec-head h2{font-family:var(--display);font-weight:700;font-size:clamp(30px,4.4vw,44px);text-transform:uppercase;letter-spacing:.01em}
+  .sec-blurb{max-width:720px;color:#48564F;margin:10px 0 26px;font-size:16px}
+
+  /* ---------- Strategy table ---------- */
+  .strategy{background:var(--card);border:1px solid var(--line);margin-top:26px}
+  .strategy table{width:100%;border-collapse:collapse;font-size:15px}
+  .strategy th{font-family:var(--display);text-transform:uppercase;letter-spacing:.05em;font-size:17px;
+    background:var(--pine);color:#F2F5EF;padding:12px 16px;text-align:left}
+  .strategy td{padding:12px 16px;border-top:1px solid var(--line);vertical-align:top}
+  .strategy td:first-child{font-weight:600;white-space:nowrap}
+
+  /* ---------- Exercise cards ---------- */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:22px}
+  .card{background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column}
+  .video{position:relative;width:100%;aspect-ratio:16/9;background:#0e1512}
+  .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .card-body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:10px;flex:1}
+  .card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+  .card h3{font-family:var(--display);font-weight:600;font-size:23px;line-height:1.05;text-transform:uppercase;letter-spacing:.015em}
+  .chip{font-family:var(--mono);font-weight:600;font-size:12.5px;white-space:nowrap;color:var(--pine);
+    border:1.5px solid var(--pine);padding:5px 9px;line-height:1;background:#EFF3ED}
+  .cue{font-size:14.5px;color:#3D4A44}
+  .cue strong{color:var(--ink)}
+  .ytlink{margin-top:auto;font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--amber-deep);text-decoration:none}
+  .ytlink:hover{text-decoration:underline}
+  .tag{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+    color:#fff;background:var(--pine-soft);padding:3px 8px;margin-bottom:2px}
+  .tag.fix{background:var(--amber-deep)}
+
+  /* ---------- Rules / footer blocks ---------- */
+  .rules{background:var(--card);border:1px solid var(--line);padding:26px 26px 20px;margin-bottom:22px}
+  .rules h3{font-family:var(--display);font-size:24px;text-transform:uppercase;margin-bottom:12px}
+  .rules ol,.rules ul{padding-left:22px;display:grid;gap:8px;font-size:15.5px}
+  footer{background:var(--pine);color:#C9D4CC;text-align:center;padding:34px 20px;font-size:14px;margin-top:56px}
+  footer strong{color:var(--amber)}
+
+  @media (max-width:640px){
+    .grid{grid-template-columns:1fr}
+    section{padding:40px 14px 12px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">3 Days / Week &middot; Bodyweight First &middot; KB / DB / Nordic Bench</div>
+    <h1>Stand Tall<br>Strength Program</h1>
+    <p class="sub">A posture-first plan built around two fixes — lengthen the tight calves and hip flexors, strengthen the glutes, hamstrings, shins, and core — while building real strength and muscle on top.</p>
+    <div class="ptnote"><strong>PT rule:</strong> exercises from his physical therapist always come first. Stop anything that causes joint pain — muscle burn is fine, joint pain is not.</div>
+  </div>
+</header>
+
+<nav>
+  <div class="wrap">
+    <a href="#daily">Daily Mobility</a>
+    <a href="#warmup">Warm-Up</a>
+    <a href="#day1">Day 1 &middot; Squat</a>
+    <a href="#day2">Day 2 &middot; Upper</a>
+    <a href="#day3">Day 3 &middot; Hinge</a>
+    <a href="#rules">Progression</a>
+  </div>
+</nav>
+
+<!-- ================= STRATEGY ================= -->
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="daynum">The Plan</span><h2>Two Problems, One Strategy</h2></div>
+    <p class="sec-blurb">Toe-walking and anterior pelvic tilt are mirror images of the same pattern: some muscles are tight and doing too much, others are weak and doing too little. Every session hits both sides.</p>
+    <div class="strategy">
+      <table>
+        <tr><th>Problem</th><th>Tight — stretch it</th><th>Weak — strengthen it</th></tr>
+        <tr><td>Toe-walking</td><td>Calves (gastrocnemius + soleus), Achilles</td><td>Tibialis anterior (shins), ankle control</td></tr>
+        <tr><td>Anterior pelvic tilt</td><td>Hip flexors, lower-back erectors</td><td>Glutes, hamstrings, abs</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DAILY MOBILITY ================= -->
+<section id="daily">
+  <div class="wrap">
+    <div class="sec-head"><span class="daynum">Every Day &middot; ~8 min</span><h2>Daily Mobility Routine</h2></div>
+    <p class="sec-blurb">The highest-leverage piece of the whole program. Do it every day, even rest days — tissue length changes come from daily consistency, not workout intensity.</p>
+    <div class="grid">
+
+      <div class="card">
+        <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/mtVqe4CR_60" title="Wall calf stretch — gastrocnemius and soleus" allowfullscreen></iframe></div>
+        <div class="card-body">
+          <div><span class="tag fix">Toe-Walk Fix</span></div>
+          <div class="card-top"><h3>Wall Calf Stretch — Straight &amp; Bent Knee</h3><span class="chip">2&times;45s each / leg</span></div>
+          <p class="cue">Straight knee hits the gastrocnemius; <strong>bent knee hits the soleus — the one most toe-walkers miss.</strong> Heel stays glued to the floor. Do both versions, both legs.</p>
+          <a class="ytlink" href="https://www.youtube.com/watch?v=mtVqe4CR_60" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/WKo4APrwfXQ" title="Couch stretch progressions" allowfullscreen></iframe></div>
+        <div class="card-body">
+          <div><span class="tag fix">Pelvic-Tilt Fix</span></div>
+          <div class="card-top"><h3>Couch Stretch / Half-Kneeling Hip Flexor Stretch</h3><span class="chip">2&times;45s / side</span></div>
+          <p class="cue"><strong>Squeeze the glute of the back leg and tuck the pelvis under</strong> — that's what makes it work. Don't arch the lower back to fake more range. Start with the easier progressions in the video.</p>
+          <a class="ytlink" href="https://www.youtube.com/watch?v=WKo4APrwfXQ" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/ZRI899Xv8PE" title="Heel walking demo — athletic trainer" allowfullscreen></iframe></div>
+        <div class="card-body">
+          <div><span class="tag fix">Toe-Walk Fix</span></div>
+          <div class="card-top"><h3>Heel Walking</h3><span class="chip">3&times;20 steps</span></div>
+          <p class="cue">Toes pulled up hard the whole time, tall posture. This directly trains the opposite pattern of toe-walking and wakes up the shin muscles.</p>
+          <a class="ytlink" href="https://www.youtube.com/watch?v=ZRI899Xv8PE" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/vcGyiiSFpEA" title="Half-kneeling ankle dorsiflexion mobilization" allowfullscreen></iframe></div>
+        <div class="card-body">
+          <div><span class="tag fix">Toe-Walk Fix</span></div>
+          <div class="card-top"><h3>Deep Squat Hold + Ankle Rocks</h3><span class="chip">2&times;30s + 10/side</span></div>
+          <p class="cue">Hold a deep squat with <strong>heels flat</strong> (hold a doorframe if needed), then do half-kneeling ankle rocks as shown — drive the knee over the toes, heel down. This is his squat-depth and dorsiflexion work.</p>
+          <a class="ytlink" href="https://www.youtube.com/watch?v=vcGyiiSFpEA" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= WARM-UP ================= -->
+<section id="warmup">
+  <div class="wrap">
+    <div class="sec-head"><span class="daynum">Before Each Session &middot; ~5 min</span><h2>Workout Warm-Up</h2></div>
+    <p class="sec-blurb">Ankle rocks (above), then these three activation drills, then 15 arm circles and towel pull-aparts. The goal is to switch on the glutes and teach the ribs-down, neutral-pelvis position before loading it.</p>
+    <div class="grid">
+
+      <div class="card">
+        <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/L9KZfxT654Y" title="Glute bridge tutorial" allowfullscreen></iframe></div>
+        <div class="card-body">
+          <div class="card-top"><h3>Glute Bridge</h3><span class="chip">1&times;15 &middot; 2s hold</span></div>
+          <p class="cue">Squeeze the glutes to lift, not the lower back. Ribs down. Two-second squeeze at the top of every rep.</p>
+          <a class="ytlink" href="https://www.youtube.com/watch?v=L9KZfxT654Y" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/bxn9FBrt4-A" title="Dead bug proper form — NASM" allowfullscreen></iframe></div>
+        <div class="card-body">
+          <div class="card-top"><h3>Dead Bug</h3><span class="chip">1&times;8 / side</span></div>
+          <p class="cue"><strong>Lower back pressed flat into the floor the entire time</strong> — that flat-back position is exactly the anti-pelvic-tilt pattern he needs. Slow and controlled.</p>
+          <a class="ytlink" href="https://www.youtube.com/watch?v=bxn9FBrt4-A" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/ZdAHe9_HeEw" title="Bird dog proper form — NASM" allowfullscreen></iframe></div>
+        <div class="card-body">
+          <div class="card-top"><h3>Bird Dog</h3><span class="chip">1&times;8 / side</span></div>
+          <p class="cue">Slow, square hips, no back arch as the leg extends. Imagine balancing a cup of water on the lower back.</p>
+          <a class="ytlink" href="https://www.youtube.com/watch?v=ZdAHe9_HeEw" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= DAY 1 ================= -->
+<section id="day1">
+  <div class="wrap">
+    <div class="sec-head"><span class="daynum">Day 01</span><h2>Lower Body — Squat Focus</h2></div>
+    <p class="sec-blurb">Rest 60–90 seconds between sets (up to 2 minutes on goblet squats). Bodyweight versions first — add the kettlebell only when 3&times;12 is clean.</p>
+    <div class="grid">
+
+      <div class="card">
+        <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/CkFzgR55gho" title="How to perform the goblet squat" allowfullscreen></iframe></div>
+        <div class="card-body">
+          <div class="card-top"><h3>Squat → Goblet Squat</h3><span class="chip">3&times;8–12</span></div>
+          <p class="cue"><strong>Heels flat the whole rep</strong> — this doubles as his ankle-dorsiflexion training. Start bodyweight; add a light KB at the chest once 3&times;12 is easy and clean.</p>
+          <a class="ytlink" href="https://www.youtube.com/watch?v=CkFzgR55gho" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/VUl8R0kn6v4" title="Single leg glute bridge tutorial" allowfullscreen></iframe></div>
+        <div class="card-body">
+          <div><span class="tag fix">Pelvic-Tilt Fix</span></div>
+          <div class="card-top"><h3>Single-Leg Glute Bridge → KB Hip Thrust</h3><span class="chip">3&times;10–12 / side</span></div>
+          <p class="cue">Hard glute squeeze at the top, ribs down — <strong>don't hyperextend the lower back to get higher.</strong> When single-leg reps are easy, move to two-leg hip thrusts with a KB on the hips.</p>
+          <a class="ytlink" href="https://www.youtube.com/watch?v=VUl8R0kn6v4" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/vBgP7bJlgMs" title="Nordic hamstring curl negatives" allowfullscreen></iframe></div>
+        <div class="card-body">
+          <div class="card-top"><h3>Nordic Curl Negatives</h3><span class="chip">3&times;4–6</span></div>
+          <p class="cue">On the Nordic bench: lower as slowly as possible (aim 5+ seconds), catch with hands, push back up with arms. <strong>Negatives only for months — full Nordics come much later, and that's normal.</strong></p>
+          <a class="ytlink" href="https://www.youtube.com/watch?v=vBgP7bJlgMs" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/VzIcGAgBiaM" title="Tibialis wall raises exercise demo" allowfullscreen></iframe></div>
+        <div class="card-body">
+          <div><span class="tag fix">Toe-Walk Fix</span></div>
+          <div class="card-top"><h3>Tibialis Wall Raises</h3><span class="chip">3&times;15–20</span></div>
+          <p class="cue">Back against the wall, heels a foot out, lift the toes as high as possible and lower slowly. Directly strengthens the muscles that oppose toe-walking.</p>
+          <a class="ytlink" href="https://www.youtube.com/watch?v=VzIcGAgBiaM" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/A2b2EmIg0dA" title="How to plank — proper form and cues" allowfullscreen></iframe></div>
+        <div class="card-body">
+          <div class="card-top"><h3>Front Plank</h3><span class="chip">3&times;20–45s</span></div>
+          <p class="cue"><strong>Glutes squeezed, pelvis tucked, ribs down</strong> — the plank is secretly practice for holding a neutral pelvis. Sagging hips = set is over.</p>
+          <a class="ytlink" href="https://www.youtube.com/watch?v=A2b2EmIg0dA" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/r1YBXgc0bdE" title="Eccentric calf raise — HSS" allowfullscreen></iframe></div>
+        <div class="card-body">
+          <div><span class="tag fix">Toe-Walk Fix</span></div>
+          <div class="card-top"><h3>Eccentric Calf Lowering (Off a Step)</h3><span class="chip">2&times;10 / side</span></div>
+          <p class="cue">Up on two feet, down on one — 4–5 seconds, <strong>heel dropping below the step through full range.</strong> Builds calf length and strength at the same time. Finish with calf stretches.</p>
+          <a class="ytlink" href="https://www.youtube.com/watch?v=r1YBXgc0bdE" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= DAY 2 ================= -->
+<section id="day2">
+  <div class="wrap">
+    <div class="sec-head"><span class="daynum">Day 02</span><h2>Upper Body + Core</h2></div>
+    <p class="sec-blurb">Push, pull, press, carry. Every exercise here is also a posture drill in disguise — ribs stacked over pelvis, no lower-back arch.</p>
+    <div class="grid">
+
+      <div class="card">
+        <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/IODxDxX7oi4" title="The perfect push up" allowfullscreen></iframe></div>
+        <div class="card-body">
+          <div class="card-top"><h3>Push-Up Progression</h3><span class="chip">3&times;6–12</span></div>
+          <p class="cue">Incline → floor → deficit. Body in one straight line — <strong>sagging hips is the pelvic tilt sneaking in.</strong> If floor push-ups break down, raise the hands on a bench.</p>
+          <a class="ytlink" href="https://www.youtube.com/watch?v=IODxDxX7oi4" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/pYcpY20QaE8" title="Single-arm dumbbell row tutorial" allowfullscreen></iframe></div>
+        <div class="card-body">
+          <div class="card-top"><h3>Single-Arm DB Row</h3><span class="chip">3&times;8–12 / side</span></div>
+          <p class="cue">Hand and knee on the bench, flat back, pull the dumbbell to the hip. No twisting or yanking — control both directions.</p>
+          <a class="ytlink" href="https://www.youtube.com/watch?v=pYcpY20QaE8" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/FLbz81jkVIM" title="Half kneeling dumbbell overhead press" allowfullscreen></iframe></div>
+        <div class="card-body">
+          <div><span class="tag fix">Pelvic-Tilt Fix</span></div>
+          <div class="card-top"><h3>Half-Kneeling DB Overhead Press</h3><span class="chip">3&times;8–10 / side</span></div>
+          <p class="cue">Half-kneeling forces the back-leg glute on and <strong>blocks the lower-back arch</strong> most people press with. Ribs down, squeeze the down-leg glute, press straight up.</p>
+          <a class="ytlink" href="https://www.youtube.com/watch?v=FLbz81jkVIM" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/lqPrSGXfL1Q" title="Resistance band Pallof press" allowfullscreen></iframe></div>
+        <div class="card-body">
+          <div class="card-top"><h3>Pallof Press (Band) or Side Plank</h3><span class="chip">3&times;10 / side</span></div>
+          <p class="cue">Anti-rotation core: press the band out and refuse to twist. No band? Side planks, 3&times;20–30 seconds per side.</p>
+          <a class="ytlink" href="https://www.youtube.com/watch?v=lqPrSGXfL1Q" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/lLAw6fUccKA" title="Farmer's carry tutorial" allowfullscreen></iframe></div>
+        <div class="card-body">
+          <div class="card-top"><h3>Farmer Carry (KB or DB)</h3><span class="chip">3&times;30–40 steps</span></div>
+          <p class="cue">Tall posture, ribs stacked over pelvis, shoulders back. <strong>Walk heel-to-toe</strong> — free gait practice under load.</p>
+          <a class="ytlink" href="https://www.youtube.com/watch?v=lLAw6fUccKA" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/HAfUt2Cco74" title="Hollow body hold progressions" allowfullscreen></iframe></div>
+        <div class="card-body">
+          <div><span class="tag fix">Pelvic-Tilt Fix</span></div>
+          <div class="card-top"><h3>Hollow Body Hold</h3><span class="chip">3&times;15–30s</span></div>
+          <p class="cue"><strong>Lower back glued to the floor</strong> — the single best anti-pelvic-tilt core drill there is. Start with knees bent (see progressions in the video) and extend the legs over time.</p>
+          <a class="ytlink" href="https://www.youtube.com/watch?v=HAfUt2Cco74" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= DAY 3 ================= -->
+<section id="day3">
+  <div class="wrap">
+    <div class="sec-head"><span class="daynum">Day 03</span><h2>Lower Body — Hinge Focus</h2></div>
+    <p class="sec-blurb">The posterior-chain day: hamstrings and glutes do the heavy lifting. Master the RDL hinge before anything explosive. Finish with the wall calf stretches from the daily routine.</p>
+    <div class="grid">
+
+      <div class="card">
+        <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/Uc5rP5xs7qQ" title="Kettlebell Romanian deadlift" allowfullscreen></iframe></div>
+        <div class="card-body">
+          <div class="card-top"><h3>KB Romanian Deadlift</h3><span class="chip">3&times;8–12</span></div>
+          <p class="cue">Hips back, flat back, soft knees, KB grazing the legs. <strong>Feel the hamstring stretch, then stand up by squeezing the glutes.</strong> The cornerstone lift of the whole program — start light.</p>
+          <a class="ytlink" href="https://www.youtube.com/watch?v=Uc5rP5xs7qQ" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/2YhcpVkhrH4" title="Rear foot elevated split squat form" allowfullscreen></iframe></div>
+        <div class="card-body">
+          <div><span class="tag fix">Pelvic-Tilt Fix</span></div>
+          <div class="card-top"><h3>Rear-Foot-Elevated Split Squat</h3><span class="chip">3&times;8–10 / side</span></div>
+          <p class="cue">Bodyweight first, then hold dumbbells. Bonus: the back leg's hip flexor gets stretched while the front leg works — two birds, one exercise.</p>
+          <a class="ytlink" href="https://www.youtube.com/watch?v=2YhcpVkhrH4" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/vBgP7bJlgMs" title="Nordic hamstring curl negatives" allowfullscreen></iframe></div>
+        <div class="card-body">
+          <div class="card-top"><h3>Nordic Curl Negatives</h3><span class="chip">3&times;4–6</span></div>
+          <p class="cue">Same as Day 1. Progress by lowering <em>slower</em> before adding reps. Slow negatives are still one of the best hamstring builders on the planet.</p>
+          <a class="ytlink" href="https://www.youtube.com/watch?v=vBgP7bJlgMs" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/XJx5Mmt9qYE" title="Kettlebell swing hip hinge progression" allowfullscreen></iframe></div>
+        <div class="card-body">
+          <div class="card-top"><h3>KB Swing <span style="font-size:15px;color:#6B7A72">(add week 5+)</span></h3><span class="chip">3&times;12–15</span></div>
+          <p class="cue"><strong>Only after the RDL hinge is solid.</strong> It's a hip snap, not a squat and not an arm lift — glutes fire the bell forward, arms just steer.</p>
+          <a class="ytlink" href="https://www.youtube.com/watch?v=XJx5Mmt9qYE" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="video"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/ONiZ3TNhAb4" title="Reverse plank with progressions" allowfullscreen></iframe></div>
+        <div class="card-body">
+          <div class="card-top"><h3>Reverse Plank</h3><span class="chip">3&times;20–30s</span></div>
+          <p class="cue">Opens the front of the hips while the glutes and hamstrings hold the position — the exact opposite of a slouched, tilted posture. Use the video's progressions if the full hold is too hard.</p>
+          <a class="ytlink" href="https://www.youtube.com/watch?v=ONiZ3TNhAb4" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= RULES ================= -->
+<section id="rules">
+  <div class="wrap">
+    <div class="sec-head"><span class="daynum">How to Progress</span><h2>Progression &amp; Recovery</h2></div>
+
+    <div class="rules">
+      <h3>Progression Rules</h3>
+      <ol>
+        <li><strong>Weeks 1–4:</strong> bodyweight versions, mastering form. Add reps within the range before adding anything else. Run week one fully bodyweight — even where a kettlebell is listed.</li>
+        <li><strong>Week 5+:</strong> when he hits the top of a rep range on all sets with clean form two sessions in a row, add the smallest KB/DB jump (or the harder variation) and drop back to the bottom of the range.</li>
+        <li><strong>Nordics:</strong> slower negatives → more reps → less hand assistance → band-assisted full reps. A full unassisted Nordic may take 6–12 months. That's on schedule, not behind.</li>
+        <li><strong>Deload:</strong> every 6–8 weeks, take one easy week at half the sets.</li>
+      </ol>
+    </div>
+
+    <div class="rules">
+      <h3>Recovery &amp; Habits</h3>
+      <ul>
+        <li><strong>Sleep 8–10 hours.</strong> At 15, this is where the muscle actually gets built.</li>
+        <li><strong>Protein at every meal</strong> — roughly a palm-sized portion or more.</li>
+        <li>Barefoot time at home builds foot and ankle awareness. Cue "heels first" when walking, but let the strength work do most of the talking.</li>
+        <li><strong>Re-check at 8 weeks:</strong> deeper flat-heel squat, easier heel walking, and less lower-back arch when standing relaxed are the wins to look for.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Train hard, stand tall. <strong>Muscle burn is fine — joint pain means stop.</strong><br>
+  Show this plan to his PT and let their exercises take priority.
+</footer>
+
+</body>
+</html>
