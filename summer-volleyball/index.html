@@ -195,6 +195,30 @@
   .info ul{padding-left:19px;margin-top:6px}
   .info li{margin-bottom:4px}
 
+
+  /* ---------- Video embeds ---------- */
+  .vid{
+    position:relative;margin-top:auto;border-radius:10px;overflow:hidden;
+    aspect-ratio:16/9;background:#0A1020;cursor:pointer;
+  }
+  .vid img{width:100%;height:100%;object-fit:cover;display:block;opacity:.92}
+  .vid:hover img,.vid:focus-visible img{opacity:1}
+  .playbtn{
+    position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+    width:52px;height:38px;background:var(--gold);border-radius:9px;
+  }
+  .playbtn::after{
+    content:"";position:absolute;top:50%;left:50%;transform:translate(-40%,-50%);
+    border-style:solid;border-width:9px 0 9px 15px;border-color:transparent transparent transparent #fff;
+  }
+  .vid-label{
+    position:absolute;left:0;right:0;bottom:0;padding:18px 10px 8px;
+    background:linear-gradient(transparent,rgba(10,16,32,.85));
+    color:#fff;font-size:.78rem;font-weight:600;line-height:1.25;
+  }
+  .vid-frame{position:relative;aspect-ratio:16/9;border-radius:10px;overflow:hidden;margin-top:auto}
+  .vid-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
   footer{
     border-top:1px solid var(--line);padding:26px 20px 48px;
     text-align:center;color:var(--muted);font-size:.86rem;
@@ -248,21 +272,19 @@
 <section id="saturday">
   <div class="sec-head"><h2>Saturday — Strength &amp; Power</h2><span class="sec-meta">45–60 min</span></div>
   <p class="sec-intro">Warm up first: 2–3 min of jogging or jump rope, then leg swings, walking lunges, hip and arm circles, 5 slow bodyweight squats, 5 easy pogo hops.
-    <a class="yt" href="https://www.youtube.com/results?search_query=dynamic+warm+up+for+volleyball+players" target="_blank" rel="noopener">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="#E02F2F"><path d="M23 7.5s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.4 4 12 4 12 4s-4.4 0-7.7.2c-.5.1-1.5.1-2.4 1-.7.7-.9 2.3-.9 2.3S1 9.4 1 11.3v1.4c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.4.2 7.4.2s4.4 0 7.7-.2c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.4c0-1.9-.2-3.8-.2-3.8zM9.8 15.1V8.4l6.1 3.4-6.1 3.3z"/></svg>
-      Warm-up demo</a></p>
+    <div class="vid" role="button" tabindex="0" data-id="OQyGncNgNIk" data-title="USA Volleyball 15-minute warm-up routine" aria-label="Play video: USA Volleyball 15-minute warm-up routine"><img src="https://i.ytimg.com/vi/OQyGncNgNIk/hqdefault.jpg" alt="" loading="lazy"><span class="playbtn" aria-hidden="true"></span><span class="vid-label">USA Volleyball 15-minute warm-up routine</span></div></p>
 
   <h3>Block 1 — Power (while fresh)</h3>
   <div class="exgrid">
     <div class="ex">
       <div class="ex-top"><span class="ex-name">Box Jump</span><span class="score">3 × 3</span></div>
       <p class="ex-note">Jump up, <strong>step down</strong> — never rebound off the box. Quality over height.</p>
-      <a class="yt" href="https://www.youtube.com/results?search_query=box+jump+step+down+proper+technique" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E02F2F"><path d="M23 7.5s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.4 4 12 4 12 4s-4.4 0-7.7.2c-.5.1-1.5.1-2.4 1-.7.7-.9 2.3-.9 2.3S1 9.4 1 11.3v1.4c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.4.2 7.4.2s4.4 0 7.7-.2c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.4c0-1.9-.2-3.8-.2-3.8zM9.8 15.1V8.4l6.1 3.4-6.1 3.3z"/></svg>Watch demo</a>
+      <div class="vid" role="button" tabindex="0" data-id="R7sS0PfPfHk" data-title="Box jump basics: stick the landing" aria-label="Play video: Box jump basics: stick the landing"><img src="https://i.ytimg.com/vi/R7sS0PfPfHk/hqdefault.jpg" alt="" loading="lazy"><span class="playbtn" aria-hidden="true"></span><span class="vid-label">Box jump basics: stick the landing</span></div>
     </div>
     <div class="ex">
       <div class="ex-top"><span class="ex-name">Broad Jump or Lateral Bound</span><span class="score">2 × 3 ea</span></div>
       <p class="ex-note">Stick every landing for 2 seconds. Soft, quiet landings.</p>
-      <a class="yt" href="https://www.youtube.com/results?search_query=lateral+bound+and+broad+jump+technique" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E02F2F"><path d="M23 7.5s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.4 4 12 4 12 4s-4.4 0-7.7.2c-.5.1-1.5.1-2.4 1-.7.7-.9 2.3-.9 2.3S1 9.4 1 11.3v1.4c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.4.2 7.4.2s4.4 0 7.7-.2c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.4c0-1.9-.2-3.8-.2-3.8zM9.8 15.1V8.4l6.1 3.4-6.1 3.3z"/></svg>Watch demo</a>
+      <div class="vid" role="button" tabindex="0" data-id="Hc9_FQgIeeg" data-title="Lateral bound technique" aria-label="Play video: Lateral bound technique"><img src="https://i.ytimg.com/vi/Hc9_FQgIeeg/hqdefault.jpg" alt="" loading="lazy"><span class="playbtn" aria-hidden="true"></span><span class="vid-label">Lateral bound technique</span></div>
     </div>
   </div>
   <div class="callout"><strong>Keep total jumps low (~15–20 contacts).</strong> She already jumps hundreds of times a week at practice — this block teaches maximal intent and clean landings, not more volume.</div>
@@ -272,32 +294,32 @@
     <div class="ex">
       <div class="ex-top"><span class="ex-name">Goblet Squat (Kettlebell)</span><span class="score">3 × 6–8</span></div>
       <p class="ex-note">Full depth, chest tall. Start light; add weight only when every rep looks identical.</p>
-      <a class="yt" href="https://www.youtube.com/results?search_query=kettlebell+goblet+squat+proper+form" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E02F2F"><path d="M23 7.5s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.4 4 12 4 12 4s-4.4 0-7.7.2c-.5.1-1.5.1-2.4 1-.7.7-.9 2.3-.9 2.3S1 9.4 1 11.3v1.4c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.4.2 7.4.2s4.4 0 7.7-.2c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.4c0-1.9-.2-3.8-.2-3.8zM9.8 15.1V8.4l6.1 3.4-6.1 3.3z"/></svg>Watch demo</a>
+      <div class="vid" role="button" tabindex="0" data-id="aNDUbH_Uv4g" data-title="Kettlebell goblet squat: proper form and common mistakes" aria-label="Play video: Kettlebell goblet squat: proper form and common mistakes"><img src="https://i.ytimg.com/vi/aNDUbH_Uv4g/hqdefault.jpg" alt="" loading="lazy"><span class="playbtn" aria-hidden="true"></span><span class="vid-label">Kettlebell goblet squat: proper form and common mistakes</span></div>
     </div>
     <div class="ex">
       <div class="ex-top"><span class="ex-name">Dumbbell Romanian Deadlift</span><span class="score">3 × 8</span></div>
       <p class="ex-note">Hinge at the hips, soft knees, flat back. Builds the hamstrings and glutes that power her jump.</p>
-      <a class="yt" href="https://www.youtube.com/results?search_query=dumbbell+romanian+deadlift+proper+form" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E02F2F"><path d="M23 7.5s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.4 4 12 4 12 4s-4.4 0-7.7.2c-.5.1-1.5.1-2.4 1-.7.7-.9 2.3-.9 2.3S1 9.4 1 11.3v1.4c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.4.2 7.4.2s4.4 0 7.7-.2c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.4c0-1.9-.2-3.8-.2-3.8zM9.8 15.1V8.4l6.1 3.4-6.1 3.3z"/></svg>Watch demo</a>
+      <div class="vid" role="button" tabindex="0" data-id="hQgFixeXdZo" data-title="Dumbbell Romanian deadlift technique for beginners" aria-label="Play video: Dumbbell Romanian deadlift technique for beginners"><img src="https://i.ytimg.com/vi/hQgFixeXdZo/hqdefault.jpg" alt="" loading="lazy"><span class="playbtn" aria-hidden="true"></span><span class="vid-label">Dumbbell Romanian deadlift technique for beginners</span></div>
     </div>
     <div class="ex">
       <div class="ex-top"><span class="ex-name">Push-Ups or DB Bench Press</span><span class="score">3 × 8–10</span></div>
       <p class="ex-note">Elevate hands on the plyo box if full push-ups aren't there yet.</p>
-      <a class="yt" href="https://www.youtube.com/results?search_query=push+up+proper+form+beginner+progression" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E02F2F"><path d="M23 7.5s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.4 4 12 4 12 4s-4.4 0-7.7.2c-.5.1-1.5.1-2.4 1-.7.7-.9 2.3-.9 2.3S1 9.4 1 11.3v1.4c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.4.2 7.4.2s4.4 0 7.7-.2c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.4c0-1.9-.2-3.8-.2-3.8zM9.8 15.1V8.4l6.1 3.4-6.1 3.3z"/></svg>Watch demo</a>
+      <div class="vid" role="button" tabindex="0" data-id="WDIpL0pjun0" data-title="How to do a push-up (NASM)" aria-label="Play video: How to do a push-up (NASM)"><img src="https://i.ytimg.com/vi/WDIpL0pjun0/hqdefault.jpg" alt="" loading="lazy"><span class="playbtn" aria-hidden="true"></span><span class="vid-label">How to do a push-up (NASM)</span></div>
     </div>
     <div class="ex">
       <div class="ex-top"><span class="ex-name">Single-Arm Dumbbell Row</span><span class="score">3 × 8–10 /side</span></div>
       <p class="ex-note">Balances all the overhead hitting volume. Control the lowering.</p>
-      <a class="yt" href="https://www.youtube.com/results?search_query=single+arm+dumbbell+row+proper+form" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E02F2F"><path d="M23 7.5s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.4 4 12 4 12 4s-4.4 0-7.7.2c-.5.1-1.5.1-2.4 1-.7.7-.9 2.3-.9 2.3S1 9.4 1 11.3v1.4c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.4.2 7.4.2s4.4 0 7.7-.2c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.4c0-1.9-.2-3.8-.2-3.8zM9.8 15.1V8.4l6.1 3.4-6.1 3.3z"/></svg>Watch demo</a>
+      <div class="vid" role="button" tabindex="0" data-id="tLnlWj7LQ34" data-title="Single-arm dumbbell row tutorial" aria-label="Play video: Single-arm dumbbell row tutorial"><img src="https://i.ytimg.com/vi/tLnlWj7LQ34/hqdefault.jpg" alt="" loading="lazy"><span class="playbtn" aria-hidden="true"></span><span class="vid-label">Single-arm dumbbell row tutorial</span></div>
     </div>
     <div class="ex">
       <div class="ex-top"><span class="ex-name">Nordic Curl (Eccentric Only)</span><span class="score">2 × 3–5</span></div>
       <p class="ex-note">Lower as slowly as possible, catch with hands, push back up. <strong>Start with 2×3</strong> — serious soreness at first. Key hamstring/ACL protection.</p>
-      <a class="yt" href="https://www.youtube.com/results?search_query=nordic+hamstring+curl+eccentric+tutorial" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E02F2F"><path d="M23 7.5s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.4 4 12 4 12 4s-4.4 0-7.7.2c-.5.1-1.5.1-2.4 1-.7.7-.9 2.3-.9 2.3S1 9.4 1 11.3v1.4c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.4.2 7.4.2s4.4 0 7.7-.2c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.4c0-1.9-.2-3.8-.2-3.8zM9.8 15.1V8.4l6.1 3.4-6.1 3.3z"/></svg>Watch demo</a>
+      <div class="vid" role="button" tabindex="0" data-id="_e9vFU9-tkc" data-title="Nordic hamstring curls: setup, form and progressions" aria-label="Play video: Nordic hamstring curls: setup, form and progressions"><img src="https://i.ytimg.com/vi/_e9vFU9-tkc/hqdefault.jpg" alt="" loading="lazy"><span class="playbtn" aria-hidden="true"></span><span class="vid-label">Nordic hamstring curls: setup, form and progressions</span></div>
     </div>
     <div class="ex">
       <div class="ex-top"><span class="ex-name">Split Squat or Lateral Lunge</span><span class="score">2 × 8 /side</span></div>
       <p class="ex-note">Single-leg strength = jump height plus ankle and knee stability.</p>
-      <a class="yt" href="https://www.youtube.com/results?search_query=dumbbell+split+squat+and+lateral+lunge+form" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E02F2F"><path d="M23 7.5s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.4 4 12 4 12 4s-4.4 0-7.7.2c-.5.1-1.5.1-2.4 1-.7.7-.9 2.3-.9 2.3S1 9.4 1 11.3v1.4c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.4.2 7.4.2s4.4 0 7.7-.2c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.4c0-1.9-.2-3.8-.2-3.8zM9.8 15.1V8.4l6.1 3.4-6.1 3.3z"/></svg>Watch demo</a>
+      <div class="vid" role="button" tabindex="0" data-id="vTlcCN-Kbr4" data-title="Dumbbell split squat beginner guide" aria-label="Play video: Dumbbell split squat beginner guide"><img src="https://i.ytimg.com/vi/vTlcCN-Kbr4/hqdefault.jpg" alt="" loading="lazy"><span class="playbtn" aria-hidden="true"></span><span class="vid-label">Dumbbell split squat beginner guide</span></div>
     </div>
   </div>
 
@@ -306,17 +328,17 @@
     <div class="ex">
       <div class="ex-top"><span class="ex-name">Dead Bug</span><span class="score">2 × 8 /side</span></div>
       <p class="ex-note">Lower back stays glued to the floor. Slow and controlled.</p>
-      <a class="yt" href="https://www.youtube.com/results?search_query=dead+bug+exercise+proper+form" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E02F2F"><path d="M23 7.5s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.4 4 12 4 12 4s-4.4 0-7.7.2c-.5.1-1.5.1-2.4 1-.7.7-.9 2.3-.9 2.3S1 9.4 1 11.3v1.4c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.4.2 7.4.2s4.4 0 7.7-.2c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.4c0-1.9-.2-3.8-.2-3.8zM9.8 15.1V8.4l6.1 3.4-6.1 3.3z"/></svg>Watch demo</a>
+      <div class="vid" role="button" tabindex="0" data-id="bxn9FBrt4-A" data-title="How to do a dead bug (NASM)" aria-label="Play video: How to do a dead bug (NASM)"><img src="https://i.ytimg.com/vi/bxn9FBrt4-A/hqdefault.jpg" alt="" loading="lazy"><span class="playbtn" aria-hidden="true"></span><span class="vid-label">How to do a dead bug (NASM)</span></div>
     </div>
     <div class="ex">
       <div class="ex-top"><span class="ex-name">Side Plank</span><span class="score">2 × 20–30s /side</span></div>
       <p class="ex-note">Straight line from head to feet; hips high.</p>
-      <a class="yt" href="https://www.youtube.com/results?search_query=side+plank+proper+form" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E02F2F"><path d="M23 7.5s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.4 4 12 4 12 4s-4.4 0-7.7.2c-.5.1-1.5.1-2.4 1-.7.7-.9 2.3-.9 2.3S1 9.4 1 11.3v1.4c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.4.2 7.4.2s4.4 0 7.7-.2c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.4c0-1.9-.2-3.8-.2-3.8zM9.8 15.1V8.4l6.1 3.4-6.1 3.3z"/></svg>Watch demo</a>
+      <div class="vid" role="button" tabindex="0" data-id="rCxF2nG9vQ0" data-title="Side plank technique and common mistakes" aria-label="Play video: Side plank technique and common mistakes"><img src="https://i.ytimg.com/vi/rCxF2nG9vQ0/hqdefault.jpg" alt="" loading="lazy"><span class="playbtn" aria-hidden="true"></span><span class="vid-label">Side plank technique and common mistakes</span></div>
     </div>
     <div class="ex">
       <div class="ex-top"><span class="ex-name">Kettlebell Suitcase Carry</span><span class="score">2 × 25 yd /side</span></div>
       <p class="ex-note">Walk tall — don't lean toward the weight. Anti-lean core strength.</p>
-      <a class="yt" href="https://www.youtube.com/results?search_query=kettlebell+suitcase+carry+form" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E02F2F"><path d="M23 7.5s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.4 4 12 4 12 4s-4.4 0-7.7.2c-.5.1-1.5.1-2.4 1-.7.7-.9 2.3-.9 2.3S1 9.4 1 11.3v1.4c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.4.2 7.4.2s4.4 0 7.7-.2c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.4c0-1.9-.2-3.8-.2-3.8zM9.8 15.1V8.4l6.1 3.4-6.1 3.3z"/></svg>Watch demo</a>
+      <div class="vid" role="button" tabindex="0" data-id="-Cb_65Fw_w0" data-title="Kettlebell suitcase carry and march" aria-label="Play video: Kettlebell suitcase carry and march"><img src="https://i.ytimg.com/vi/-Cb_65Fw_w0/hqdefault.jpg" alt="" loading="lazy"><span class="playbtn" aria-hidden="true"></span><span class="vid-label">Kettlebell suitcase carry and march</span></div>
     </div>
   </div>
 
@@ -342,22 +364,22 @@
     <div class="ex">
       <div class="ex-top"><span class="ex-name">Wall Sets, Close Range (3 ft)</span><span class="score">3 × 25</span></div>
       <p class="ex-note">Hands only, quiet contact, ball to the same spot every rep.</p>
-      <a class="yt" href="https://www.youtube.com/results?search_query=volleyball+wall+setting+drills+for+setters" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E02F2F"><path d="M23 7.5s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.4 4 12 4 12 4s-4.4 0-7.7.2c-.5.1-1.5.1-2.4 1-.7.7-.9 2.3-.9 2.3S1 9.4 1 11.3v1.4c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.4.2 7.4.2s4.4 0 7.7-.2c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.4c0-1.9-.2-3.8-.2-3.8zM9.8 15.1V8.4l6.1 3.4-6.1 3.3z"/></svg>Watch demo</a>
+      <div class="vid" role="button" tabindex="0" data-id="WV_bWjWIaxM" data-title="Solo setting drills for small spaces" aria-label="Play video: Solo setting drills for small spaces"><img src="https://i.ytimg.com/vi/WV_bWjWIaxM/hqdefault.jpg" alt="" loading="lazy"><span class="playbtn" aria-hidden="true"></span><span class="vid-label">Solo setting drills for small spaces</span></div>
     </div>
     <div class="ex">
       <div class="ex-top"><span class="ex-name">Wall Sets, Mid Range (6–8 ft)</span><span class="score">3 × 15</span></div>
       <p class="ex-note">Add the legs. Consistent arc, consistent target.</p>
-      <a class="yt" href="https://www.youtube.com/results?search_query=volleyball+setting+technique+hands+and+legs" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E02F2F"><path d="M23 7.5s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.4 4 12 4 12 4s-4.4 0-7.7.2c-.5.1-1.5.1-2.4 1-.7.7-.9 2.3-.9 2.3S1 9.4 1 11.3v1.4c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.4.2 7.4.2s4.4 0 7.7-.2c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.4c0-1.9-.2-3.8-.2-3.8zM9.8 15.1V8.4l6.1 3.4-6.1 3.3z"/></svg>Watch demo</a>
+      <div class="vid" role="button" tabindex="0" data-id="_c_ql9llwrE" data-title="At-home wall pass and wall set drill" aria-label="Play video: At-home wall pass and wall set drill"><img src="https://i.ytimg.com/vi/_c_ql9llwrE/hqdefault.jpg" alt="" loading="lazy"><span class="playbtn" aria-hidden="true"></span><span class="vid-label">At-home wall pass and wall set drill</span></div>
     </div>
     <div class="ex">
       <div class="ex-top"><span class="ex-name">One-Touch Rapid-Fire Wall Sets</span><span class="score">2 × 20</span></div>
       <p class="ex-note">Quick hands, fast reset under the ball.</p>
-      <a class="yt" href="https://www.youtube.com/results?search_query=volleyball+quick+hands+setting+drill+wall" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E02F2F"><path d="M23 7.5s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.4 4 12 4 12 4s-4.4 0-7.7.2c-.5.1-1.5.1-2.4 1-.7.7-.9 2.3-.9 2.3S1 9.4 1 11.3v1.4c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.4.2 7.4.2s4.4 0 7.7-.2c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.4c0-1.9-.2-3.8-.2-3.8zM9.8 15.1V8.4l6.1 3.4-6.1 3.3z"/></svg>Watch demo</a>
+      <div class="vid" role="button" tabindex="0" data-id="hIaxCX5IQTk" data-title="At-home wall volleyball drills" aria-label="Play video: At-home wall volleyball drills"><img src="https://i.ytimg.com/vi/hIaxCX5IQTk/hqdefault.jpg" alt="" loading="lazy"><span class="playbtn" aria-hidden="true"></span><span class="vid-label">At-home wall volleyball drills</span></div>
     </div>
     <div class="ex">
       <div class="ex-top"><span class="ex-name">Setter Footwork to the Ball</span><span class="score">2 × 10</span></div>
       <p class="ex-note">Toss to random spots — beat the ball there, square shoulders to target, then set. Right-foot-forward finish.</p>
-      <a class="yt" href="https://www.youtube.com/results?search_query=volleyball+setter+footwork+drills" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E02F2F"><path d="M23 7.5s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.4 4 12 4 12 4s-4.4 0-7.7.2c-.5.1-1.5.1-2.4 1-.7.7-.9 2.3-.9 2.3S1 9.4 1 11.3v1.4c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.4.2 7.4.2s4.4 0 7.7-.2c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.4c0-1.9-.2-3.8-.2-3.8zM9.8 15.1V8.4l6.1 3.4-6.1 3.3z"/></svg>Watch demo</a>
+      <div class="vid" role="button" tabindex="0" data-id="0Dr8wWKOT4c" data-title="Setting footwork drills" aria-label="Play video: Setting footwork drills"><img src="https://i.ytimg.com/vi/0Dr8wWKOT4c/hqdefault.jpg" alt="" loading="lazy"><span class="playbtn" aria-hidden="true"></span><span class="vid-label">Setting footwork drills</span></div>
     </div>
   </div>
 
@@ -366,12 +388,12 @@
     <div class="ex">
       <div class="ex-top"><span class="ex-name">Approach Footwork (No Jump)</span><span class="score">2 × 8</span></div>
       <p class="ex-note">Left-right-left rhythm (righty), arms back on the penultimate step. Grass is fine.</p>
-      <a class="yt" href="https://www.youtube.com/results?search_query=volleyball+spike+approach+footwork+tutorial" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E02F2F"><path d="M23 7.5s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.4 4 12 4 12 4s-4.4 0-7.7.2c-.5.1-1.5.1-2.4 1-.7.7-.9 2.3-.9 2.3S1 9.4 1 11.3v1.4c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.4.2 7.4.2s4.4 0 7.7-.2c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.4c0-1.9-.2-3.8-.2-3.8zM9.8 15.1V8.4l6.1 3.4-6.1 3.3z"/></svg>Watch demo</a>
+      <div class="vid" role="button" tabindex="0" data-id="1maaeU5PT8s" data-title="3-step spike approach footwork tutorial" aria-label="Play video: 3-step spike approach footwork tutorial"><img src="https://i.ytimg.com/vi/1maaeU5PT8s/hqdefault.jpg" alt="" loading="lazy"><span class="playbtn" aria-hidden="true"></span><span class="vid-label">3-step spike approach footwork tutorial</span></div>
     </div>
     <div class="ex">
       <div class="ex-top"><span class="ex-name">Arm Swing Mechanics</span><span class="score">2 × 10</span></div>
       <p class="ex-note">High elbow, fast wrist — light-ball throws or towel snaps overhead. Finish with 5–8 full approach jumps max, focused on timing.</p>
-      <a class="yt" href="https://www.youtube.com/results?search_query=volleyball+arm+swing+mechanics+tutorial" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E02F2F"><path d="M23 7.5s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.4 4 12 4 12 4s-4.4 0-7.7.2c-.5.1-1.5.1-2.4 1-.7.7-.9 2.3-.9 2.3S1 9.4 1 11.3v1.4c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.4.2 7.4.2s4.4 0 7.7-.2c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.4c0-1.9-.2-3.8-.2-3.8zM9.8 15.1V8.4l6.1 3.4-6.1 3.3z"/></svg>Watch demo</a>
+      <div class="vid" role="button" tabindex="0" data-id="VzkVivsRB_0" data-title="Arm swing mechanics: 3 motions" aria-label="Play video: Arm swing mechanics: 3 motions"><img src="https://i.ytimg.com/vi/VzkVivsRB_0/hqdefault.jpg" alt="" loading="lazy"><span class="playbtn" aria-hidden="true"></span><span class="vid-label">Arm swing mechanics: 3 motions</span></div>
     </div>
   </div>
 
@@ -380,17 +402,17 @@
     <div class="ex">
       <div class="ex-top"><span class="ex-name">Lateral Shuffle (5 yd each way)</span><span class="score">× 4</span></div>
       <p class="ex-note">Stay low, don't cross the feet.</p>
-      <a class="yt" href="https://www.youtube.com/results?search_query=lateral+shuffle+defensive+slide+drill" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E02F2F"><path d="M23 7.5s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.4 4 12 4 12 4s-4.4 0-7.7.2c-.5.1-1.5.1-2.4 1-.7.7-.9 2.3-.9 2.3S1 9.4 1 11.3v1.4c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.4.2 7.4.2s4.4 0 7.7-.2c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.4c0-1.9-.2-3.8-.2-3.8zM9.8 15.1V8.4l6.1 3.4-6.1 3.3z"/></svg>Watch demo</a>
+      <div class="vid" role="button" tabindex="0" data-id="iBmvPEWt5og" data-title="Lateral shuffle with ACL-safe technique" aria-label="Play video: Lateral shuffle with ACL-safe technique"><img src="https://i.ytimg.com/vi/iBmvPEWt5og/hqdefault.jpg" alt="" loading="lazy"><span class="playbtn" aria-hidden="true"></span><span class="vid-label">Lateral shuffle with ACL-safe technique</span></div>
     </div>
     <div class="ex">
       <div class="ex-top"><span class="ex-name">5-10-5 Pro Agility</span><span class="score">× 3 @ ~85%</span></div>
       <p class="ex-note">Submax effort — clean change of direction, not a race.</p>
-      <a class="yt" href="https://www.youtube.com/results?search_query=5+10+5+pro+agility+drill+technique" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E02F2F"><path d="M23 7.5s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.4 4 12 4 12 4s-4.4 0-7.7.2c-.5.1-1.5.1-2.4 1-.7.7-.9 2.3-.9 2.3S1 9.4 1 11.3v1.4c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.4.2 7.4.2s4.4 0 7.7-.2c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.4c0-1.9-.2-3.8-.2-3.8zM9.8 15.1V8.4l6.1 3.4-6.1 3.3z"/></svg>Watch demo</a>
+      <div class="vid" role="button" tabindex="0" data-id="NTPv84f2ykc" data-title="Pro agility 5-10-5 drill" aria-label="Play video: Pro agility 5-10-5 drill"><img src="https://i.ytimg.com/vi/NTPv84f2ykc/hqdefault.jpg" alt="" loading="lazy"><span class="playbtn" aria-hidden="true"></span><span class="vid-label">Pro agility 5-10-5 drill</span></div>
     </div>
     <div class="ex">
       <div class="ex-top"><span class="ex-name">Two-Foot Line Hops</span><span class="score">2 × 15 sec</span></div>
       <p class="ex-note">Forward/back and side-to-side. Quick, light contacts — ankle stiffness and prep.</p>
-      <a class="yt" href="https://www.youtube.com/results?search_query=line+hops+drill+ankle+quickness" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E02F2F"><path d="M23 7.5s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.4 4 12 4 12 4s-4.4 0-7.7.2c-.5.1-1.5.1-2.4 1-.7.7-.9 2.3-.9 2.3S1 9.4 1 11.3v1.4c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.4.2 7.4.2s4.4 0 7.7-.2c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.4c0-1.9-.2-3.8-.2-3.8zM9.8 15.1V8.4l6.1 3.4-6.1 3.3z"/></svg>Watch demo</a>
+      <div class="vid" role="button" tabindex="0" data-id="NQpuOLViNMw" data-title="Line hops for quickness" aria-label="Play video: Line hops for quickness"><img src="https://i.ytimg.com/vi/NQpuOLViNMw/hqdefault.jpg" alt="" loading="lazy"><span class="playbtn" aria-hidden="true"></span><span class="vid-label">Line hops for quickness</span></div>
     </div>
   </div>
 
@@ -399,17 +421,17 @@
     <div class="ex">
       <div class="ex-top"><span class="ex-name">Ankle Rocks (Knee to Wall)</span><span class="score">10 /side</span></div>
       <p class="ex-note">Heel stays down; knee tracks over the toes toward the wall.</p>
-      <a class="yt" href="https://www.youtube.com/results?search_query=knee+to+wall+ankle+mobility+drill" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E02F2F"><path d="M23 7.5s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.4 4 12 4 12 4s-4.4 0-7.7.2c-.5.1-1.5.1-2.4 1-.7.7-.9 2.3-.9 2.3S1 9.4 1 11.3v1.4c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.4.2 7.4.2s4.4 0 7.7-.2c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.4c0-1.9-.2-3.8-.2-3.8zM9.8 15.1V8.4l6.1 3.4-6.1 3.3z"/></svg>Watch demo</a>
+      <div class="vid" role="button" tabindex="0" data-id="ElrpduJn92Y" data-title="Knee-to-wall ankle mobility" aria-label="Play video: Knee-to-wall ankle mobility"><img src="https://i.ytimg.com/vi/ElrpduJn92Y/hqdefault.jpg" alt="" loading="lazy"><span class="playbtn" aria-hidden="true"></span><span class="vid-label">Knee-to-wall ankle mobility</span></div>
     </div>
     <div class="ex">
       <div class="ex-top"><span class="ex-name">Deep Squat Hold</span><span class="score">2 × 30 sec</span></div>
       <p class="ex-note">Relax at the bottom; use a doorframe for balance if needed.</p>
-      <a class="yt" href="https://www.youtube.com/results?search_query=deep+squat+hold+mobility" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E02F2F"><path d="M23 7.5s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.4 4 12 4 12 4s-4.4 0-7.7.2c-.5.1-1.5.1-2.4 1-.7.7-.9 2.3-.9 2.3S1 9.4 1 11.3v1.4c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.4.2 7.4.2s4.4 0 7.7-.2c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.4c0-1.9-.2-3.8-.2-3.8zM9.8 15.1V8.4l6.1 3.4-6.1 3.3z"/></svg>Watch demo</a>
+      <div class="vid" role="button" tabindex="0" data-id="0wzrgyAurT8" data-title="How to deep squat hold" aria-label="Play video: How to deep squat hold"><img src="https://i.ytimg.com/vi/0wzrgyAurT8/hqdefault.jpg" alt="" loading="lazy"><span class="playbtn" aria-hidden="true"></span><span class="vid-label">How to deep squat hold</span></div>
     </div>
     <div class="ex">
       <div class="ex-top"><span class="ex-name">DB External Rotations (2–5 lb)</span><span class="score">2 × 12 /side</span></div>
       <p class="ex-note">Shoulder care for hitters — light weight, slow tempo. Add a doorway pec stretch and overhead reach, 30 sec each.</p>
-      <a class="yt" href="https://www.youtube.com/results?search_query=dumbbell+external+rotation+shoulder+exercise" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E02F2F"><path d="M23 7.5s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.4 4 12 4 12 4s-4.4 0-7.7.2c-.5.1-1.5.1-2.4 1-.7.7-.9 2.3-.9 2.3S1 9.4 1 11.3v1.4c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.4.2 7.4.2s4.4 0 7.7-.2c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.4c0-1.9-.2-3.8-.2-3.8zM9.8 15.1V8.4l6.1 3.4-6.1 3.3z"/></svg>Watch demo</a>
+      <div class="vid" role="button" tabindex="0" data-id="20v3G-odF5c" data-title="Side-lying dumbbell external rotation" aria-label="Play video: Side-lying dumbbell external rotation"><img src="https://i.ytimg.com/vi/20v3G-odF5c/hqdefault.jpg" alt="" loading="lazy"><span class="playbtn" aria-hidden="true"></span><span class="vid-label">Side-lying dumbbell external rotation</span></div>
     </div>
   </div>
 
@@ -473,12 +495,12 @@
     <div class="info">
       <h4>Ankle Prep</h4>
       <p>Volleyball's #1 injury. Single-leg balance (30 sec/side while brushing teeth) plus Monday's line hops go a long way.
-      <a class="yt" href="https://www.youtube.com/results?search_query=single+leg+balance+ankle+stability+exercises" target="_blank" rel="noopener" style="margin-top:8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E02F2F"><path d="M23 7.5s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.4 4 12 4 12 4s-4.4 0-7.7.2c-.5.1-1.5.1-2.4 1-.7.7-.9 2.3-.9 2.3S1 9.4 1 11.3v1.4c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.4.2 7.4.2s4.4 0 7.7-.2c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.4c0-1.9-.2-3.8-.2-3.8zM9.8 15.1V8.4l6.1 3.4-6.1 3.3z"/></svg>Watch demo</a></p>
+      </p>
     </div>
     <div class="info">
       <h4>Setter IQ</h4>
       <p>Watch high-level matches with attention on the setter — delivery choices against different blocks, tempo, disguise. Ten focused minutes beats an hour of background watching.
-      <a class="yt" href="https://www.youtube.com/results?search_query=best+volleyball+setters+film+breakdown" target="_blank" rel="noopener" style="margin-top:8px"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E02F2F"><path d="M23 7.5s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.4 4 12 4 12 4s-4.4 0-7.7.2c-.5.1-1.5.1-2.4 1-.7.7-.9 2.3-.9 2.3S1 9.4 1 11.3v1.4c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.4.2 7.4.2s4.4 0 7.7-.2c.5-.1 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.4c0-1.9-.2-3.8-.2-3.8zM9.8 15.1V8.4l6.1 3.4-6.1 3.3z"/></svg>Setter film study</a></p>
+      <div class="vid" role="button" tabindex="0" data-id="nkA2A9rQj4M" data-title="Tactical breakdown of two elite setters" aria-label="Play video: Tactical breakdown of two elite setters"><img src="https://i.ytimg.com/vi/nkA2A9rQj4M/hqdefault.jpg" alt="" loading="lazy"><span class="playbtn" aria-hidden="true"></span><span class="vid-label">Tactical breakdown of two elite setters</span></div></p>
     </div>
     <div class="info">
       <h4>Season Transition</h4>
@@ -504,9 +526,30 @@
 </main>
 
 <footer>
-  Video links open a curated YouTube search for each movement, so demos stay current. Always prioritize form over load — and stop for any joint or bone pain.<br>
-  <span style="display:inline-block;margin-top:10px;font-family:'Barlow Condensed',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:1.05rem;color:var(--navy)">Go Big Blue, Red <span style="color:var(--gold)">&amp;</span> White</span>
+  Tap any video to play its demo right here on the page (streamed from YouTube). Always prioritize form over load — and stop for any joint or bone pain.
 </footer>
 
+
+<script>
+(function(){
+  function play(v){
+    var wrap=document.createElement('div');
+    wrap.className='vid-frame';
+    var f=document.createElement('iframe');
+    f.src='https://www.youtube-nocookie.com/embed/'+v.dataset.id+'?autoplay=1&rel=0';
+    f.title=v.dataset.title||'Exercise demo';
+    f.allow='autoplay; encrypted-media; picture-in-picture';
+    f.allowFullscreen=true;
+    wrap.appendChild(f);
+    v.replaceWith(wrap);
+  }
+  document.querySelectorAll('.vid').forEach(function(v){
+    v.addEventListener('click',function(){play(v);});
+    v.addEventListener('keydown',function(e){
+      if(e.key==='Enter'||e.key===' '){e.preventDefault();play(v);}
+    });
+  });
+})();
+</script>
 </body>
 </html>
